@@ -1,0 +1,93 @@
+<template>
+    <div class="card-body card-block">
+        <form method="post" v-on:submit.prevent="store" id="addComponent" enctype="multipart/form-data" class="form-horizontal">
+            <div class="row form-group">
+                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Title </label></div>
+                <div class="col-12 col-md-9"><input type="text" id="text-input" v-model="form.title" placeholder="title" class="form-control"></div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col col-md-3"><label for="textarea-input" class=" form-control-label"> Gallery Image </label></div>
+                 <div class="col-12 col-md-9">
+                    <div id="app">
+                        <input type="file" @change="onFileInput($event)">
+                        <small class="form-text text-muted" v-if="(errors.hasOwnProperty('my_photo'))" style="color: red;"> {{ (errors.hasOwnProperty('my_photo')) ? errors.my_photo[0] :'' }} </small>
+                        <img :src="my_photo" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm">
+                    <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm">
+                    <i class="fa fa-ban"></i> Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</template>
+
+<script>
+    import { EventBus } from './../vue-assets';
+    export default {
+
+        components: {  },
+
+        // props:[''],
+
+        data:function(){
+            return {
+                list:false,
+                add_form:true,
+                edit_form:false,
+                view_form:false,
+                el: "#app",
+                form:{
+                    title: '',
+                    my_photo: '',
+                },
+                errors: {},
+            };
+        },
+
+        methods:{
+            store:function() {
+                var _this = this;
+                axios.post(base_url+'visitor-gallery', _this.form).then( (response) => {
+                    this.showMassage(response.data);
+                    EventBus.$emit('data-changed');
+                }).catch(error => {
+					if(error.response.status == 422){
+						this.errors = error.response.data.errors;
+					}else{
+						this.showMassage(error);
+					}
+				});
+            },
+
+            onFileInput(event) {           
+              const data = event.target.files[0];
+              this.form.my_photo = data;
+            },
+
+            showMassage(data){
+                if(data.status == 'success'){
+                    toastr.success(data.message, 'Success Alert');
+                }else if(data.status == 'error'){
+                    toastr.error(data.message, 'Error Alert');
+                }else{
+                    toastr.error(data.message, 'Error Alert');
+                }
+            },
+        },
+
+        computed: {
+          isComplete () {
+            return this.form.mobile;
+          }
+        },
+
+    }
+</script>
