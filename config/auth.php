@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'cbadmin' => [
+            'driver' => 'session',
+            'provider' => 'cbadmins',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -68,6 +73,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'cbadmins' => [
+            'driver' => 'eloquent',
+            'model' => App\CbAdmin::class,
         ],
 
         // 'users' => [

@@ -39,6 +39,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapCbAdminRoutes();
+
         //
     }
 
@@ -54,6 +56,15 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
+    }
+
+    protected function mapCbAdminRoutes()
+    {
+        Route::prefix("cbadmin")
+             ->as('cbadmin.')
+             ->middleware('cbadmin')
+             ->namespace($this->namespace."\CbAdmin")
+             ->group(base_path('routes/cbadmin.php'));
     }
 
     /**

@@ -11,7 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('messages')->insert([
+        DB::table('cb_admins')->insert([
+            'name' => "admin",
+            'email' =>'admin@gmail.com',
+            'password' => bcrypt('123456'),
+        ]);
+
+         DB::table('messages')->insert([
         [
             'name' => str_random(10),
             'email' => str_random(10).'@gmail.com',
