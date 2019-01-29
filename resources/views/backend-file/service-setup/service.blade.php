@@ -8,7 +8,7 @@
 				<div class="card">
 					<div class="card-header">
 						<div class="col-md-11">
-							<strong> Add New  </strong> Service
+							<strong> Service Info  </strong> 
 						</div>
 						<div class="col-md-1">
 							<div class="pull-right col-md-4 col-12">

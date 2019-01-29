@@ -21,10 +21,9 @@
 		            <thead>
 		                <tr>
                             <th> # </th>
-		                    <th> Name </th>
-		                    <th> Email </th>
-                            <th> Mobile </th>
-		                    <th> Message </th>
+		                    <th>  Name </th>
+                            <th>  Email </th>
+		                   <!--  <th>  Status </th> -->
 		                    <th> Created Date </th>
 		                    <th> Action </th>
 		                </tr>
@@ -33,12 +32,18 @@
 		                	<tr v-for="(value, index) in resultData.data">
 		                		 <td>{{index+1}}</td>
 		                		 <td>{{value.name}}</td>
-		                		 <td>{{value.email}}</td>
-		                		 <td>{{value.mobile}}</td>
-		                		 <td>{{value.message}}</td>
+                                 <td>{{value.email}}</td>
+                      <!--            <td>
+                                     
+                                 <a v-if="value.status = '2'" class="btn btn-success btn-sm">User</a>
+                                 <a v-if="value.status = '1'" class="btn btn-primary btn-sm">Admin</a>
+
+                                 </td> -->
+	
 		                		 <td>{{value.created_at}}</td>
 		                		 <td class="text-center">
                                     <a style="cursor: pointer;" class="btn-sm" @click="deleteData(value.id)"><i aria-hidden="true" class="fa fa-trash-o btnColor"></i></a>
+                                    <a style="cursor: pointer;" class="btn-sm" @click="editData(value.id)"><i aria-hidden="true" class="fa fa-pencil-square-o btnColor"></i></a>
                                  </td>
 		                	</tr>
 		                </tbody>
@@ -57,12 +62,16 @@
 		</div>
 	</div>
 
+    <AddForm  v-else-if="add_form"></AddForm>
+    <EditForm  v-else-if="edit_form" :edit-id="edit_id"></EditForm>
 </template>
 
 <script>  
 	import { EventBus } from './../vue-assets';
     import VueToastr2 from 'vue-toastr-2'
     import 'vue-toastr-2/dist/vue-toastr-2.min.css'
+    import AddForm from './AddForm.vue';
+    import EditForm from './EditForm.vue';
     import Pagination from  './../components/Pagination.vue';
     window.toastr = require('toastr')
      
@@ -71,6 +80,8 @@
     export default {
         components: {
             Pagination,
+            AddForm,
+            EditForm,
         },
 
         data(){
@@ -91,7 +102,7 @@
             {
                 if(pageNo){ pageNo = pageNo; }else{pageNo = this.resultData.current_page; }
                 if(perPage){ perPage = perPage;}else{ perPage = this.perPage;}
-                 axios.get(base_url+"cbadmin/message/?page="+pageNo+"&perPage="+perPage).then((response) => {
+                 axios.get(base_url+"cbadmin/admin-new/?page="+pageNo+"&perPage="+perPage).then((response) => {
                     this.resultData = response.data;
                 });
             },
@@ -114,7 +125,7 @@
 
             deleteData: function(id){
                 var _this = this;
-                axios.delete(base_url+'cbadmin/message/'+id).then((response) => {
+                axios.delete(base_url+'cbadmin/admin-new/'+id).then((response) => {
                     _this.index(1);
                     _this.showMassage(response.data);
                 }).catch((error)=>{
@@ -124,20 +135,6 @@
 
         //==================== resource route destroy only delete one id or data end ======================= 
 
-
-            //====================== marked data will delete by this type of route start =========================
-
-            deleteMarkedData: function(){
-                var _this = this;
-                axios.post(base_url+'team-member/delete_users',_this.deleteId).then((response) => {
-                    _this.index(1);
-                    _this.showMassage(response.data);
-                }).catch((error)=>{
-                    _this.showMassage(error);
-                });
-            },
-
-            // ============================ marked data will delete by this type of route end ==================
 
             showMassage(data){
                 if(data.status == 'success'){
@@ -151,24 +148,6 @@
 
         },
 
-        computed: {
-            selectAll: {
-                get: function () {
-                    return this.resultData.data ? this.deleteId.length == this.resultData.data.length : false;
-                },
-                set: function (value) {
-                    var selected = [];
-
-                    if (value) {
-                        this.resultData.data.forEach(function (user) {
-                            selected.push(user.id);
-                        });
-                    }
-
-                    this.deleteId = selected;
-                }
-            }
-        },
         created() {
             var _this = this;
 

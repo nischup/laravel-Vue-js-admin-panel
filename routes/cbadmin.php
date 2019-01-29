@@ -6,11 +6,17 @@ Route::post('/',"LoginController@verify" )->name('login.verify');
 
 Route::group(['middleware' => 'auth.cbadmin'], function () {
     
-    Route::get('/home',function () {
-    return view('cbadmin.index');
+    Route::get('/dashboard',function () {
+    return view('backend-file.dashboard');
 } )->name('home.index');
 
-Route::get('/logout',"LoginController@logout" )->name('login.logout');
+	Route::resource('admin-new', 'CbAdminController');
+	Route::resource('message', 'MessageController');
+	Route::resource('team-member', 'TeamMemberController');
+	Route::resource('service-setup', 'ServiceController');
+	Route::resource('visitor-gallery', 'VisitorGalleryController');
+
+	Route::get('/logout',"LoginController@logout" )->name('login.logout');
 
 });
 

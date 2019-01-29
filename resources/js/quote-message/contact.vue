@@ -64,7 +64,7 @@
         methods:{
             store:function() {
                 var _this = this;
-                axios.post(base_url+'message', _this.form).then( (response) => {
+                axios.post(base_url+'sent-message', _this.form).then( (response) => {
                     this.showMassage(response.data);
                     _this.form = {};
                     EventBus.$emit('data-changed');

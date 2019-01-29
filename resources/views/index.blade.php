@@ -18,7 +18,7 @@
                         <h3 class="slide-sub-title"> Foreign Investment Consulting </h3>
                         <p class="slider-description lead">Nobody’s more committed to connecting you with the exceptional <br> top talents with the right fit
                            for your business than us.</p>
-                        <p><a class="slider btn btn-primary" href="#">Our Services</a><a class="slider btn btn-border" href="#">Contact Us</a></p>
+                        <p><a class="slider btn btn-primary" href="{{ route('service') }}">Our Services</a><a class="slider btn btn-border" href="{{ route('contact') }}">Contact Us</a></p>
                      </div>
                      <!-- Col end-->
                   </div>
@@ -32,7 +32,7 @@
                   <div class="slider-content text-center">
                      <div class="col-md-12">
                         <h3 class="slide-sub-title">We provide solutions to<br>grow your business</h3>
-                        <p><a class="slider btn btn-primary" href="#">Our Services</a><a class="slider btn btn-border" href="#">Contact Us</a></p>
+                        <p><a class="slider btn btn-primary" href="{{ route('service') }}">Our Services</a><a class="slider btn btn-border" href="{{ route('contact') }}">Contact Us</a></p>
                      </div>
                      <!-- Col end-->
                   </div>
@@ -49,7 +49,7 @@
                         <h3 class="slide-sub-title">We care about your Business</h3>
                         <p class="slider-description lead">Nobody’s more committed to connecting you with the exceptional <br> top talents with the right fit
                            for your business than us.</p>
-                        <p><a class="slider btn btn-primary" href="#">Our Services</a><a class="slider btn btn-border" href="#">Contact Us</a></p>
+                        <p><a class="slider btn btn-primary" href="{{ route('service') }}">Our Services</a><a class="slider btn btn-border" href="{{ route('contact') }}">Contact Us</a></p>
                      </div>
                      <!-- Col end-->
                   </div>
@@ -70,7 +70,7 @@
             <div class="row text-center">
                <div class="col-md-12">
                   <h2 class="section-title"><span>Our Services</span>What We Do</h2>
-               </div>
+               </div>  
             </div>
             <!-- Title row end-->
            <div class="row">
@@ -88,6 +88,7 @@
                </div>
                
                @endforeach
+
             </div> 
          </div>
          <!-- Container end-->
@@ -110,53 +111,6 @@
                   <h2 class="column-title"> 6 Years of Experience</h2>
                   <p class="intro-desc">We are rethoric question ran over her cheek When she reached the first hills of the Italic Mountains.</p>
                   <div class="gap-20"></div>
-                  <div class="row facts-wrapper text-center">
-                     <div class="col-md-6">
-                        <div class="ts-facts"><span class="facts-icon"><i class="icon icon-chart2"></i></span>
-                           <div class="ts-facts-content">
-                              <h4 class="ts-facts-num"><span class="counterUp">85</span></h4>
-                              <p class="facts-desc">Business Growth %</p>
-                           </div>
-                        </div>
-                        <!-- Facts end-->
-                     </div>
-                     <!-- Col 1 end-->
-                     <div class="col-md-6">
-                        <div class="ts-facts"><span class="facts-icon"><i class="icon icon-invest"></i></span>
-                           <div class="ts-facts-content">
-                              <h4 class="ts-facts-num"><span class="counterUp">467</span></h4>
-                              <p class="facts-desc">Successful Investment</p>
-                           </div>
-                        </div>
-                        <!-- Facts end-->
-                     </div>
-                     <!-- Col 1 end-->
-                  </div>
-                  <!--Row End -->
-                  <div class="gap-30"></div>
-                  <div class="row facts-wrapper text-center">
-                     <div class="col-md-6">
-                        <div class="ts-facts facts-col"><span class="facts-icon"><i class="icon icon-money-1"></i></span>
-                           <div class="ts-facts-content">
-                              <h4 class="ts-facts-num"><span class="counterUp">2435</span></h4>
-                              <p class="facts-desc">Cases Completed</p>
-                           </div>
-                        </div>
-                        <!-- Facts end-->
-                     </div>
-                     <!-- Col 1 end-->
-                     <div class="col-md-6">
-                        <div class="ts-facts"><span class="facts-icon"><i class="icon icon-deal"></i></span>
-                           <div class="ts-facts-content">
-                              <h4 class="ts-facts-num"><span class="counterUp">139</span></h4>
-                              <p class="facts-desc">Running Projects</p>
-                           </div>
-                        </div>
-                        <!-- Facts end-->
-                     </div>
-                     <!-- Col 1 end-->
-                  </div>
-                  <!-- Row End -->
                </div>
                <!-- Content Row 2 end-->
             </div>
@@ -166,81 +120,48 @@
       </section>
       <!-- Fun fact end-->
 
-      <section class="ts-featured-cases">
-         <div class="container">
-            <div class="section-title-vertical">
-               <h2 class="section-title">Featured Cases</h2>
-            </div>
-            <!-- Title row end-->
+      <section class="ts-facts-area solid-bg no-padding" id="ts-facts-area">
+         <div class="container-fluid">
+             <div class="gap-20"></div>
             <div class="row">
-               <div class="owl-carousel owl-theme featured-cases-slide" id="featured-cases-slide">
-                  <div class="item">
-                     <div class="featured-projects-content">
-                        <div class="featured-projects-text float-left">
-                           <h2 class="column-title"><span>Marketing Growth</span> Modern Woodman Ltd.</h2>
-                           <p class="intro-desc">A business strategy is the means by which it sets out to achieve its desired ends. You have ideas,
-                              goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like
-                              you and make your dream come true.</p>
-                           <p><a class="btn btn-primary" href="#"> Read More</a></p>
-                        </div>
-                        <div class="features-slider-img float-right">
-                           <img class="img-fluid" src="images\slider-small\featured-slider1.jpg" alt="">
-                        </div>
-                     </div>
+               <div class="col-lg-6 col-md-12">
+                  <div class="intro-video">
+                     <img class="img-fluid" src="{{ asset('FrontEndResource\images\image-kamal.png') }}" alt="">
                   </div>
-                  <!-- Item 1 end-->
-                  <div class="item">
-                     <div class="featured-projects-content">
-                        <div class="featured-projects-text pull-left">
-                           <h2 class="column-title"><span>Tax Planning</span>Alpha Century Software Inc.</h2>
-                           <p class="intro-desc">A business strategy is the means by which it sets out to achieve its desired ends. You have ideas,
-                              goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like
-                              you and make your dream come true.</p>
-                           <p><a class="btn btn-primary" href="#"> Read More</a></p>
-                        </div>
-                        <div class="features-slider-img pull-right">
-                           <img src="images\slider-small\featured-slider2.jpg" alt="">
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item 2 end-->
-                  <div class="item">
-                     <div class="featured-projects-content">
-                        <div class="featured-projects-text float-left">
-                           <h2 class="column-title"><span>Business Loan</span>Spider Microsystem</h2>
-                           <p class="intro-desc">A business strategy is the means by which it sets out to achieve its desired ends. You have ideas,
-                              goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like
-                              you and make your dream come true.</p>
-                           <p><a class="btn btn-primary" href="#"> Read More</a></p>
-                        </div>
-                        <div class="features-slider-img float-right">
-                           <img class="img-fluid" src="images\slider-small\featured-slider3.jpg" alt="">
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item 3 end-->
+                  <!-- Intro video end-->
                </div>
-               <!-- Featured Projects slider end-->
+               <!-- Col end-->
+               <div class="col-lg-6 col-md-12 ts-padding text-lg-left text-center">
+                  <div class="featured-projects-text float-left">
+                     <h2 class="column-title"><span></span> CEO & Senior Partner</h2>
+                     <h2 class="column-title"><span>Hosein Karumaru</span></h2>
+                     <p class="intro-desc">
+                        Since its founding in 2011, he has served as a representative director and senior consultant, Creative Co., Ltd., engaged in numerous in-depth support and investment projects. Not only linguistic barriers but also business practices greatly differ between Japan and Bangladesh possess abundant business knowledge and network infrastructure. Our strengths are consulting that makes the most of these
+                     </p>
+                  </div>
+               </div>
+               <!-- Content Row 2 end-->
             </div>
-            <!-- Content row end-->
+            <!-- Col end-->
          </div>
          <!-- Container end-->
       </section>
-      <!-- Featured projects end-->
+      <!-- Fun fact end-->
 
       <section class="bg-overlay ts-chart">
          <div class="container">
+              <div class="gap-20"></div>
             <div class="row">
-               <div class="col-lg-5 col-md-12">
-                  <h2 class="column-title title-white"><span>Integrity</span> Thinking of Building</h2>
-                  <p class="intro-desc">We are rethoric question ran over her cheek When she reached the first hills of the Italic Mountains, she
-                     had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village
-                     and the subline of her own road, the Line Lane.</p>
-                  <p><a class="link-more color" href="#">Explore All Cases <i class="fa fa-long-arrow-right"></i></a></p>
+               <div class="col-lg-7 col-md-12">
+                  <h2 class="column-title title-white"><span></span> About Company </h2>
+                  <p class="intro-desc">On 2013 ... in Bangladesh one of the developing nation introduced a foreign investment based company named creative bj limited.</p>   
+                  <p class="intro-desc">From the very beginning company has done a tremendous work on foreign investment silutions.currently our company had more then sixty(60) real estate company and more then 1000 company is in the queue for registration under creative bj limited.</p>
                </div>
                <!-- col end-->
-               <div class="col-lg-7 col-md-12">
-                  <div id="graph"></div>
+               <div class="col-lg-5 col-md-12">
+                  <h2 class="column-title title-white"><span></span> Our aim </h2>
+                  <p class="intro-desc">The only goal and aim of creative bj is provide people bulk number of invest solutions,contributing on financial planning as to establish sole property business and joint business..</p> 
+
                </div>
                <!-- Col end-->
             </div>
@@ -259,74 +180,23 @@
             </div>
             <!-- Title row end-->
             <div class="row">
+               @foreach($team_photos as $data_team)
                <div class="col-lg-3 col-md-12">
                   <div class="ts-team-wrapper">
                      <div class="team-img-wrapper">
-                        <img class="img-fluid" alt="" src="images\team\team1.jpg">
+                        <img class="img-fluid" alt="" src="uploads/team/{{ $data_team->profile_pic }}">
                      </div>
                      <div class="ts-team-content">
-                        <h3 class="team-name">Denise Brewer</h3>
-                        <p class="team-designation">Senior Project Manager</p>
+                        <h3 class="team-name"> {{ $data_team->name }}</h3>
+                        <p class="team-designation">{{ $data_team->designation }}</p>
                      </div>
                      <!-- Team content end-->
-                     <div class="team-social-icons"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
                      <!-- social-icons-->
                   </div>
                   <!-- Team wrapper 1 end-->
                </div>
                <!-- Col end-->
-               <div class="col-lg-3 col-md-12">
-                  <div class="ts-team-wrapper">
-                     <div class="team-img-wrapper">
-                        <img class="img-fluid" alt="" src="images\team\team2.jpg">
-                     </div>
-                     <div class="ts-team-content">
-                        <h3 class="team-name">Patrick Ryan</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                     </div>
-                     <!-- Team content end-->
-                     <div class="team-social-icons"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                     <!-- social-icons-->
-                  </div>
-                  <!-- Team wrapper 1 end-->
-               </div>
-               <!-- Col end-->
-               <div class="col-lg-3 col-md-12">
-                  <div class="ts-team-wrapper">
-                     <div class="team-img-wrapper">
-                        <img class="img-fluid" alt="" src="images\team\team3.jpg">
-                     </div>
-                     <div class="ts-team-content">
-                        <h3 class="team-name">Craig Robinson</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                     </div>
-                     <!-- Team content end-->
-                     <div class="team-social-icons"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                     <!-- social-icons-->
-                  </div>
-                  <!-- Team wrapper 1 end-->
-               </div>
-               <!-- Col end-->
-               <div class="col-lg-3 col-md-12">
-                  <div class="ts-team-wrapper">
-                     <div class="team-img-wrapper">
-                        <img class="img-fluid" alt="" src="images\team\team4.jpg">
-                     </div>
-                     <div class="ts-team-content">
-                        <h3 class="team-name">Andrew Robinson</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                     </div>
-                     <!-- Team content end-->
-                     <div class="team-social-icons"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                     <!-- social-icons-->
-                  </div>
-                  <!-- Team wrapper 1 end-->
-               </div>
-               <!-- Col end-->
+               @endforeach
             </div>
             <!-- Content row end-->
          </div>
@@ -392,68 +262,30 @@
       </section>
       <!-- Quote area end-->
 
-      <section class="news" id="news">
+         <section class="main-container" id="main-container">
          <div class="container">
-            <div class="row text-center">
-               <div class="col-md-12">
-                  <h2 class="section-title"><span>Don't Miss</span>Our Latest News</h2>
-               </div>
-            </div>
             <div class="row">
-               <div class="col-lg-6">
-                  <div class="latest-post post-large">
-                     <div class="latest-post-media">
-                        <a class="latest-post-img" href="#">
-                           <img class="img-fluid" src="{{ asset('FrontEndResource\images\news\news1.jpg') }} alt="img">
-                        </a><a class="post-cat" href="#">News</a>
-                        <div class="post-body"><span class="post-item-date">20 Nov, 2017</span>
-                           <h4 class="post-title"><a href="#">Apple reveals its new Melbourne flagship store</a></h4><a class="btn btn-primary" href="#">Read More</a>
-                        </div>
-                        <!-- Post body end-->
-                     </div>
-                     <!-- Post media end-->
-                  </div>
-                  <!-- Latest post end-->
+               <div class="col-12">
+                  <h3 class="addons-title"> Recent Visitor Gallery </h3>
                </div>
-               <!-- Col big news end-->
-               <div class="col-lg-6">
-                  <div class="row">
-                     <div class="col-lg-6">
-                        <div class="latest-post">
-                           <div class="post-body"><a class="post-cat" href="#">News</a>
-                              <h4 class="post-title"><a href="#">Bitcoin is the gag gift you should buy this holiday season</a></h4><span class="post-item-date">20 Nov, 2017</span>
-                              <div class="post-text">
-                                 <p>Earlier this year, the firm announced it had reached its goal of hiring.</p>
-                                 <div class="text-right"><a href="#">Read More <i class="fa fa-long-arrow-right"> </i></a></div>
-                              </div>
-                           </div>
+               @foreach($gallery_photos as $data)
+               <div class="col-lg-4 col-md-12">
+                  <div class="ts-case-box">
+                     <div class="ts-case-image-wrapper">
+                        <img class="img-fluid" src="uploads/gallery/{{ $data->photo }}" alt="">
+                        <div class="ts-case-content">
+                           <h4 class="case-title">
+                            {{ $data->title }}</h4>
                         </div>
-                        <!-- Latest post end-->
                      </div>
-                     <!-- Col end-->
-                     <div class="col-lg-6">
-                        <div class="latest-post">
-                           <div class="post-body"><a class="post-cat" href="#">News</a>
-                              <h4 class="post-title"><a href="#">Uber is selling off its auto-leasing business</a></h4><span class="post-item-date">20 Nov, 2017</span>
-                              <div class="post-text">
-                                 <p>Earlier this year, the firm announced it had reached its goal of hiring.</p>
-                                 <div class="text-right"><a href="#">Read More <i class="fa fa-long-arrow-right"> </i></a></div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Latest post end-->
-                     </div>
-                     <!-- Col end-->
+                     <!-- Case Content end-->
                   </div>
-                  <!-- row end-->
                </div>
-               <!-- Col small news end-->
+               @endforeach
             </div>
-            <!-- Content row end-->
          </div>
-         <!-- Container end-->
       </section>
-      <!-- News end-->
+      <div class="gap-40"></div>
 
       {{-- ================== component script start --}}
 

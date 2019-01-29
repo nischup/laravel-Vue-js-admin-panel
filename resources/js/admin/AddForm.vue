@@ -5,27 +5,30 @@
                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">Name </label></div>
                 <div class="col-12 col-md-9"><input type="text" id="text-input" v-model="form.name" placeholder="Name" class="form-control"><small class="form-text text-muted" v-if="(errors.hasOwnProperty('name'))" style="color: red;"> {{ (errors.hasOwnProperty('name')) ? errors.name[0] :'' }} </small></div>
             </div>
+
             <div class="row form-group">
-                <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email </label></div>
-                <div class="col-12 col-md-9"><input type="email" id="email-input" v-model="form.email"  placeholder="Enter Email" class="form-control"><small class="form-text text-muted" v-if="(errors.hasOwnProperty('email'))" style="color: red;"> {{ (errors.hasOwnProperty('email')) ? errors.email[0] :'' }} </small></div>
-            </div>
+                <div class="col col-md-3"><label for="textarea-input" class=" form-control-label"> Email </label></div>
+                <div class="col-12 col-md-9"><input type="text" id="text-input" v-model="form.email" placeholder="Email" class="form-control">
+                <small class="form-text text-muted" v-if="(errors.hasOwnProperty('email'))" style="color: red;"> {{ (errors.hasOwnProperty('email')) ? errors.email[0] :'' }} </small></div>
+            </div> 
+
             <div class="row form-group">
-                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Designation </label></div>
-                <div class="col-12 col-md-9"><input type="text" id="text-input" v-model="form.designation" placeholder="Type Your Designation" class="form-control"><small class="form-text text-muted" v-if="(errors.hasOwnProperty('designation'))" style="color: red;"> {{ (errors.hasOwnProperty('designation')) ? errors.designation[0] :'' }} </small></div>
+                <div class="col col-md-3"><label for="textarea-input" class=" form-control-label"> Password </label></div>
+                <div class="col-12 col-md-9"><input type="password" id="text-input" v-model="form.password" placeholder="Password" class="form-control">
+                <small class="form-text text-muted" v-if="(errors.hasOwnProperty('password'))" style="color: red;"> {{ (errors.hasOwnProperty('password')) ? errors.password[0] :'' }} </small></div>
             </div>
+
             <div class="row form-group">
-                 <div class="col col-md-3"><label for="text-input" class=" form-control-label"> Photo </label></div>
-                <div class="col-sm-6">
-                     <input type="file" v-on:change="onFileChange" class="form-control">
-                </div>   
-                <div class="col-sm-3">
-                     <img :src="form.profile_pic" class="img-responsive">
-                </div>
+                <div class="col col-md-3"><label for="textarea-input" class=" form-control-label"> Status </label></div>
+                <div class="col-12 col-md-9">
+                    <select name="selectSm" id="SelectLm" v-model="form.status" class="form-control-sm form-control">
+                        <option value=""> Select Status </option>
+                        <option value="1"> Admin </option>
+                        <option value="2"> User </option>
+                    </select>
+                <small class="form-text text-muted" v-if="(errors.hasOwnProperty('status'))" style="color: red;"> {{ (errors.hasOwnProperty('status')) ? errors.status[0] :'' }} </small></div>
             </div>
-            <div class="row form-group">
-                <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Message</label></div>
-                <div class="col-12 col-md-9"><textarea v-model="form.message" id="textarea-input" rows="3" placeholder="Content..." class="form-control"></textarea></div>
-            </div>
+
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary btn-sm">
                     <i class="fa fa-dot-circle-o"></i> Save
@@ -56,10 +59,7 @@
                 form:{
                     name: '',
                     email: '',
-                    designation: '',
-                    profile_pic: '',
-                    message: '',
-                    
+                    password: '',
                 },
                 errors: {},
             };
@@ -68,7 +68,7 @@
         methods:{
             store:function() {
                 var _this = this;
-                axios.post(base_url+'cbadmin/team-member', _this.form).then( (response) => {
+                axios.post(base_url+'cbadmin/admin-new', _this.form).then( (response) => {
                     this.showMassage(response.data);
                     EventBus.$emit('data-changed');
                 }).catch(error => {
@@ -78,21 +78,6 @@
 						this.showMassage(error);
 					}
 				});
-            },
-
-             onFileChange(e) {
-                let files = e.target.files || e.dataTransfer.files;
-                if (!files.length)
-                    return;
-                this.createImage(files[0]);
-            },
-            createImage(file) {
-                let reader = new FileReader();
-                let vm = this;
-                reader.onload = (e) => {
-                    vm.form.profile_pic = e.target.result;
-                };
-                reader.readAsDataURL(file);
             },
 
             showMassage(data){
@@ -114,9 +99,3 @@
 
     }
 </script>
-
-<style scoped>
-    img{
-        max-height: 80px;
-    }
-</style>

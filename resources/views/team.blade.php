@@ -20,160 +20,6 @@
          <!-- Container end-->
       </div>
       <!-- Banner area end-->
-      <section class="main-container" id="main-container">
-
-         <div class="container">
-            <div class="row text-center">
-               <div class="col-lg-12">
-                  <h2 class="section-title"><span>Our People</span>Best Team</h2>
-               </div>
-            </div>
-            <!-- Title row end-->
-            <div class="row">
-               <div class="col-lg-4">
-                  <div class="ts-team-classic">
-                     <div class="team-img-wrapper">
-                        <img class="img-responsive" alt="" src="images\team\team1.jpg">
-                     </div>
-                     <div class="ts-team-info">
-                        <h3 class="team-name">Denise Brewer</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                        <p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience
-                           in .</p>
-                        <div class="team-social-classic"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                           <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                        <!-- social-icons-->
-                     </div>
-                     <!-- Team info 1 end-->
-                  </div>
-                  <!-- Team classic 1 end-->
-               </div>
-               <!-- Col end-->
-               <div class="col-lg-4">
-                  <div class="ts-team-classic">
-                     <div class="team-img-wrapper">
-                        <img class="img-responsive" alt="" src="images\team\team2.jpg">
-                     </div>
-                     <div class="ts-team-info">
-                        <h3 class="team-name">Denise Brewer</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                        <p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience
-                           in .</p>
-                        <div class="team-social-classic"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                           <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                        <!-- social-icons-->
-                     </div>
-                     <!-- Team info 2 end-->
-                  </div>
-                  <!-- Team classic 2 end-->
-               </div>
-               <!-- Col end-->
-               <div class="col-lg-4">
-                  <div class="ts-team-classic">
-                     <div class="team-img-wrapper">
-                        <img class="img-responsive" alt="" src="images\team\team3.jpg">
-                     </div>
-                     <div class="ts-team-info">
-                        <h3 class="team-name">Denise Brewer</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                        <p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience
-                           in .</p>
-                        <div class="team-social-classic"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                           <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                        <!-- social-icons-->
-                     </div>
-                     <!-- Team info 3 end-->
-                  </div>
-                  <!-- Team classic 3 end-->
-               </div>
-               <!-- Col end-->
-            </div>
-            <!-- Content row end-->
-         </div>
-      </section>
-
-      <section class="ts-team solid-bg">
-         <div class="container">
-            <div class="row text-center">
-               <div class="col-md-12">
-                  <h2 class="section-title"><span>Our People</span>Best Team</h2>
-               </div>
-            </div>
-            <!-- Title row end-->
-            <div class="row">
-               <div class="col-lg-3 col-md-6">
-                  <div class="ts-team-wrapper">
-                     <div class="team-img-wrapper">
-                        <img class="img-fluid" alt="" src="images\team\team1.jpg">
-                     </div>
-                     <div class="ts-team-content">
-                        <h3 class="team-name">Denise Brewer</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                     </div>
-                     <!-- Team content end-->
-                     <div class="team-social-icons"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                     <!-- social-icons-->
-                  </div>
-                  <!-- Team wrapper 1 end-->
-               </div>
-               <!-- Col end-->
-               <div class="col-lg-3 col-md-6">
-                  <div class="ts-team-wrapper">
-                     <div class="team-img-wrapper">
-                        <img class="img-fluid" alt="" src="images\team\team2.jpg">
-                     </div>
-                     <div class="ts-team-content">
-                        <h3 class="team-name">Patrick Ryan</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                     </div>
-                     <!-- Team content end-->
-                     <div class="team-social-icons"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                     <!-- social-icons-->
-                  </div>
-                  <!-- Team wrapper 1 end-->
-               </div>
-               <!-- Col end-->
-               <div class="col-lg-3 col-md-6">
-                  <div class="ts-team-wrapper">
-                     <div class="team-img-wrapper">
-                        <img class="img-fluid" alt="" src="images\team\team3.jpg">
-                     </div>
-                     <div class="ts-team-content">
-                        <h3 class="team-name">Craig Robinson</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                     </div>
-                     <!-- Team content end-->
-                     <div class="team-social-icons"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                     <!-- social-icons-->
-                  </div>
-                  <!-- Team wrapper 1 end-->
-               </div>
-               <!-- Col end-->
-               <div class="col-lg-3 col-md-6">
-                  <div class="ts-team-wrapper">
-                     <div class="team-img-wrapper">
-                        <img class="img-fluid" alt="" src="images\team\team4.jpg">
-                     </div>
-                     <div class="ts-team-content">
-                        <h3 class="team-name">Andrew Robinson</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                     </div>
-                     <!-- Team content end-->
-                     <div class="team-social-icons"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                     <!-- social-icons-->
-                  </div>
-                  <!-- Team wrapper 1 end-->
-               </div>
-               <!-- Col end-->
-            </div>
-            <!-- Content row end-->
-         </div>
-         <!-- Container end-->
-      </section>
 
       <section id="ts-team" class="ts-team">
          <div class="container">
@@ -184,66 +30,26 @@
             </div>
             <!-- Title row end-->
             <div class="row">
+               @foreach($team_photos as $data_team)
                <div class="col-lg-4">
                   <div class="ts-team-classic">
                      <div class="team-img-wrapper">
-                        <img class="img-responsive" alt="" src="images\team\team1.jpg">
+                        <img class="img-responsive" alt="" src="uploads/team/{{ $data_team->profile_pic }}">
                      </div>
                      <div class="ts-team-info team-list-border">
-                        <h3 class="team-name">Denise Brewer</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                        <p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience
-                           in .</p>
-                        <div class="team-social-classic"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                           <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
+                        <h3 class="team-name">{{ $data_team->name }}</h3>
+                        <p class="team-designation">{{ $data_team->designation }}</p>
+                        <p>{!! $data_team->message !!}</p>
+                        <div class="team-social-classic">
+                           <i class="fa fa-envelope"></i> {{ $data_team->email }}
+                        </div>
                         <!-- social-icons-->
                      </div>
                      <!-- Team info 1 end-->
                   </div>
                   <!-- Team classic 1 end-->
                </div>
-               <!-- Col end-->
-               <div class="col-lg-4">
-                  <div class="ts-team-classic">
-                     <div class="team-img-wrapper">
-                        <img class="img-responsive" alt="" src="images\team\team2.jpg">
-                     </div>
-                     <div class="ts-team-info team-list-border">
-                        <h3 class="team-name">Denise Brewer</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                        <p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience
-                           in .</p>
-                        <div class="team-social-classic">
-                           <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
-                           <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                           <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
-                           <a target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                        <!-- social-icons-->
-                     </div>
-                     <!-- Team info 2 end-->
-                  </div>
-                  <!-- Team classic 2 end-->
-               </div>
-               <!-- Col end-->
-               <div class="col-lg-4">
-                  <div class="ts-team-classic">
-                     <div class="team-img-wrapper">
-                        <img class="img-responsive" alt="" src="images\team\team3.jpg">
-                     </div>
-                     <div class="ts-team-info team-list-border">
-                        <h3 class="team-name">Denise Brewer</h3>
-                        <p class="team-designation">Senior Project Manager</p>
-                        <p>Eradicate invest honesty human rights accessibility theory of social change. Diversity experience
-                           in .</p>
-                        <div class="team-social-classic"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-                           <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></div>
-                        <!-- social-icons-->
-                     </div>
-                     <!-- Team info 3 end-->
-                  </div>
-                  <!-- Team classic 3 end-->
-               </div>
+               @endforeach
                <!-- Col end-->
             </div>
             <!-- Content row end-->

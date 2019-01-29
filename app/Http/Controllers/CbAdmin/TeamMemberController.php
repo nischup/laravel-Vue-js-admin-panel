@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\CbAdmin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\TeamMember;
 use Session;
 use DB;
+use Carbon\Carbon;
 
 
 class TeamMemberController extends Controller
@@ -30,7 +31,7 @@ class TeamMemberController extends Controller
     {
         $this->validate($request, [
                 'name' => 'required',
-                'email' => 'required|unique',
+                'email' => 'required',
                 'designation' => 'required',
             ], [
                 'name.required' => 'The Name field is required.',
@@ -41,13 +42,18 @@ class TeamMemberController extends Controller
         try {
             DB::beginTransaction();
 
+            $imageData = $request->get('profile_pic');
+            $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
+            \Image::make($request->get('profile_pic'))->resize(200, 200)->save(public_path('uploads/team/').$fileName);
+
         $data = [
             'name' => $request->name,
             'email' => $request->email,
             'designation' => $request->designation,
-            'profile_pic' => $request->profile_pic,
+            'profile_pic' => $fileName,
             'message' => $request->message,
         ];
+        // dd($data);
         TeamMember::create($data);
 
         DB::commit();
@@ -66,12 +72,44 @@ class TeamMemberController extends Controller
 
     public function edit($id)
     {
-        //
+        return TeamMember::FindOrFail($id);
     }
 
     public function update(Request $request, $id)
     {
-        //
+            $this->validate($request, [
+                'name' => 'required',
+                'email' => 'required',
+                'designation' => 'required',
+            ], [
+                'name.required' => 'The Name field is required.',
+                'email.required' => 'The Email field is required.',
+                'designation.required' => 'The Designation field is required.',
+            ]);
+
+        try {
+            DB::beginTransaction();
+
+          // $imageData = $request->get('profile_pic');
+          //   $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
+          //   \Image::make($request->get('profile_pic'))->resize(200, 200)->save(public_path('uploads/team/').$fileName);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'designation' => $request->designation,
+            // 'profile_pic' => $fileName,
+            'message' => $request->message,
+        ];
+        // dd($data);
+        TeamMember::FindOrFail($id)->update($data);
+
+        DB::commit();
+            return response()->json(['status' => 'success', 'message' => 'Update Team Info']);
+        } catch (\Exception $e) {
+            DB::rollback();
+            return response()->json(['status' => 'error', 'message' => 'Something Error Found !, Please try again']);
+        }
     }
 
     public function destroy($id)

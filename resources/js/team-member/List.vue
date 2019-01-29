@@ -59,7 +59,7 @@
 	</div>
 
     <AddForm  v-else-if="add_form"></AddForm>
-
+    <EditForm  v-else-if="edit_form" :edit-id="edit_id"></EditForm>
 </template>
 
 <script>  
@@ -67,6 +67,7 @@
     import VueToastr2 from 'vue-toastr-2'
     import 'vue-toastr-2/dist/vue-toastr-2.min.css'
     import AddForm from './AddForm.vue';
+    import EditForm from './EditForm.vue';
     import Pagination from  './../components/Pagination.vue';
     window.toastr = require('toastr')
      
@@ -74,8 +75,9 @@
 
     export default {
         components: {
-        	AddForm,
             Pagination,
+            AddForm,
+            EditForm,
         },
 
         data(){
@@ -96,7 +98,7 @@
             {
                 if(pageNo){ pageNo = pageNo; }else{pageNo = this.resultData.current_page; }
                 if(perPage){ perPage = perPage;}else{ perPage = this.perPage;}
-                 axios.get(base_url+"team-member/?page="+pageNo+"&perPage="+perPage).then((response) => {
+                 axios.get(base_url+"cbadmin/team-member/?page="+pageNo+"&perPage="+perPage).then((response) => {
                     this.resultData = response.data;
                 });
             },
@@ -119,7 +121,7 @@
 
             deleteData: function(id){
                 var _this = this;
-                axios.delete(base_url+'team-member/'+id).then((response) => {
+                axios.delete(base_url+'cbadmin/team-member/'+id).then((response) => {
                     _this.index(1);
                     _this.showMassage(response.data);
                 }).catch((error)=>{
@@ -134,7 +136,7 @@
 
             deleteMarkedData: function(){
                 var _this = this;
-                axios.post(base_url+'team-member/delete_users',_this.deleteId).then((response) => {
+                axios.post(base_url+'cbadmin/team-member/delete_users',_this.deleteId).then((response) => {
                     _this.index(1);
                     _this.showMassage(response.data);
                 }).catch((error)=>{

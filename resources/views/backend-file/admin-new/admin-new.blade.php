@@ -8,7 +8,7 @@
 				<div class="card">
 					<div class="card-header">
 						<div class="col-md-11">
-							<strong> Visitor Gallery Info </strong> 
+							<strong> Admin/User Info  </strong> 
 						</div>
 						<div class="col-md-1">
 							<div class="pull-right col-md-4 col-12">
@@ -23,13 +23,13 @@
 							</div>
 						</div>
 					</div>
-					<div id="gallery">
-						<gallery-list></gallery-list>
+					<div id="admin">
+						<admin-list></admin-list>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div><!-- .animated -->
 </div><!-- .content -->
-<script src="{{ asset('js/gallery.js') }}"></script>
+<script src="{{ asset('js/admin.js') }}"></script>
 @endsection

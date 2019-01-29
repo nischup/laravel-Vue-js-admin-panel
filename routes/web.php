@@ -16,18 +16,5 @@ Route::get('office-team','PagesController@team')->name('office-team');
 Route::get('gallery','PagesController@visitor')->name('gallery');
 Route::get('service','PagesController@service')->name('service');
 Route::get('contact','PagesController@contact')->name('contact');
+Route::post('sent-message','PagesController@message')->name('sent-message');
 
-Route::resource('message', 'MessageController');
-Route::resource('team-member', 'TeamMemberController');
-Route::resource('service-setup', 'ServiceController');
-Route::resource('visitor-gallery', 'VisitorGalleryController');
-
-// Route::get('login', function () {
-//     return view('backend-file.login');
-// });
-
-
-
-Auth::routes();
-
-Route::get('/admin', 'PagesController@dashboard')->name('dashboard');

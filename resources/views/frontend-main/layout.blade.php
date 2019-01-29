@@ -212,16 +212,10 @@
                   <div class="col-lg-4 col-md-12 footer-widget">
                      <h3 class="widget-title">Useful Links</h3>
                      <ul class="list-dash">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Services</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Our Blog</a></li>
-                        <li><a href="#">Why Need Agent?</a></li>
-                        <li><a href="#">Investments</a></li>
-                        <li><a href="#">Consultation</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                        <li><a href="{{ route('service') }}">Our Services</a></li>
+                        <li><a href="{{ route('office-team') }}">Our Team</a></li>
                      </ul>
                   </div>
                   <div class="col-lg-4 col-md-12W footer-widget">
@@ -247,15 +241,7 @@
                       <div class="copyright-info"><span>Copyright © 2019 Creativebj. All Rights Reserved.</span></div>
                   </div>
                   <div class="col-lg-6 col-md-12">
-                     <div class="footer-menu">
-                        <ul class="nav unstyled">
-                           <li><a href="#">About</a></li>
-                           <li><a href="#">Privacy Policy</a></li>
-                           <li><a href="#">Investors</a></li>
-                           <li><a href="#">Legals</a></li>
-                           <li><a href="#">Contact</a></li>
-                        </ul>
-                     </div>
+     
                   </div>
                </div>
                <!-- Row end-->

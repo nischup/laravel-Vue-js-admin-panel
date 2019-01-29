@@ -35,37 +35,45 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="{{ asset('BackendResource/images/logo.png') }}" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="{{ route('dashboard') }}"><img src="images/logo2.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./"> Creative-bj Admin </a>
+                <a class="navbar-brand hidden" href="{{ route('cbadmin.home.index') }}"><img src="{{ asset('BackendResource/images/logo2.png') }}" alt="Logo"></a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="{{ route('dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{ route('cbadmin.home.index') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i> Admin / User </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="{{ route('cbadmin.admin-new.index') }}"> Add New Admin / User </a></li>
+                        </ul>
+                    </li>   
+
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Message</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="{{ route('message.index') }}"> Show Message </a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ route('cbadmin.message.index') }}"> Show Message </a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i> Team Member </a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="{{ route('team-member.index') }}"> Team Member List</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="{{ route('cbadmin.team-member.index') }}"> Team Member List</a></li>
                         </ul>
                     </li>      
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i> Service </a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="{{ route('service-setup.index') }}"> Service List</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="{{ route('cbadmin.service-setup.index') }}"> Service List</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i> Visitor Gallery </a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="{{ route('visitor-gallery.index') }}"> Gallery List</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="{{ route('cbadmin.visitor-gallery.index') }}"> Gallery List</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -95,7 +103,7 @@
                             </form>
                         </div>
 
-                        <div class="dropdown for-notification">
+{{--                         <div class="dropdown for-notification">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-bell"></i>
                                 <span class="count bg-danger">5</span>
@@ -115,9 +123,9 @@
                                 <p>Server #3 overloaded.</p>
                             </a>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="dropdown for-message">
+{{--                         <div class="dropdown for-message">
                             <button class="btn btn-secondary dropdown-toggle" type="button"
                                 id="message"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -159,7 +167,7 @@
                                 </span>
                             </a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -176,7 +184,7 @@
 
                             <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a> --}}
 
-                            <a class="nav-link" href="{{ route('logout') }}"><i class="fa fa-power-off"></i> Logout</a>
+                            <a class="nav-link" href="{{ route('cbadmin.login.logout') }}"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>
 
